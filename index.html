@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About Anicetus</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <script src="https://unpkg.com/typed.js@2.0.16"></script>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <style>
+    #iam {
+      margin-left: 25%;
+      margin-right: 25%;
+      margin-top: 100px;
+      text-align: center;
+      font-size: 5em;
+    }
+    #iam span:not(.typed-text) {
+      color: black;
+    }
+
+    .typed-text {
+      color: rgb(32, 117, 245);
+    }
+
+    #subheader {
+      margin: auto;
+      margin-top: 5em;
+      text-align: center;
+      width: 35%;
+      font-size: 2em;
+    }
+
+    #arrows {
+      width: 4%;
+      height: auto;
+      margin-left: 48%;
+      margin-right: 48%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .wave {
+      width: 100%;
+      height: auto;
+      left: 0px;
+      z-index: 3;
+      display: block;
+    }
+
+    .things {
+      background-color: rgb(0,19,70);
+      text-align: center;
+      color: rgb(255, 255, 255);
+      z-index: 8;
+    }
+
+    #thing-1 {
+      margin-top: 360px;
+      margin-left: 25%;
+      margin-right: 25%;
+      width: 50%;
+      position: absolute;
+    }
+
+    #thing-2 {
+      margin: 0;
+      padding: 100px;
+    }
+
+    .dark div, p, span {
+      color: white;
+      font-size: larger;
+    }
+    .dark {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -2px;
+      background-color: rgb(0,19,70);
+    }
+
+    .wborder {
+      border: 4px solid black;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      padding: 10px;
+      display: block;
+      width: 20%;
+      height: 30%;
+      margin: 10px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    .wborder h2 {
+      margin: auto;
+      display: block;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .wborder img {
+      border: 4px solid rgb(255, 196, 0);
+      border-radius: 10px;
+    }
+  </style>
+
+  <body style="margin: 0%;">
+
+    <ul id="navbar">
+      <a href="/"><img src="/images/widelogo.png" alt="Anicetus" id="homebut" style="width: 15%; height: auto;"></a>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/accomplishments">Accomplishments</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+
+    <div id="main">
+      <div id="iam">
+        <span>I am </span><span class="typed-text"></span>
+      </div>
+  
+      <div id="subheader">I'm an American teenager who loves coding and working with electronics.<br>Learn more about me!</div>
+
+      <img src="./images/arrows.png" alt="" id="arrows">
+
+      <div>
+        <h1 class="things" id="thing-1">Some things I've done...</h1>
+      
+        <img src="./images/wave.png" alt="" class="wave">
+
+        <div style="display: flex;" class="dark">
+          <div class="wborder">
+            <h2 style="width: fit-content;"><a href="https://easy-qmk.vercel.app/">EasyQMK</a></h2>
+            <img src="./images/EasyQMK.png" alt="EasyQMK's Key Setup Page" style="width: 95%; height: auto;">
+          </div>
+          <div class="wborder">
+            <h2 style="width: fit-content;"><a href="https://invictus-anic3tus.github.io/MathSite">MathSite</a></h2>
+            <img src="./images/EasyQMK.png" alt="EasyQMK's Key Setup Page" style="width: 95%; height: auto;">
+          </div>
+        </div>
+
+        <h1 class="things" id="thing-2">... and some things I'm doing.</h1>
+
+        <div style="display: flex;" class="dark">
+          <div class="wborder">
+            <h2 style="width: fit-content;"><a href="https://easy-qmk.vercel.app/">EasyQMK</a></h2>
+            <img src="./images/EasyQMK.png" alt="EasyQMK's Key Setup Page" style="width: 95%; height: auto;">
+          </div>
+          <div class="wborder">
+            <h2 style="width: fit-content;"><a href="./images/arrows.png">Hi</a></h2>
+            <img src="./images/EasyQMK.png" alt="EasyQMK's Key Setup Page" style="width: 95%; height: auto;">
+          </div>
+      </div>
+
+      
+    </div>
+
+    <div id="footer">
+      <span>© 2024 By Anicetus</span>
+    </div>
+
+    <script>
+      var typed = new Typed('.typed-text', {
+        strings: ["a coder", "a designer", "a pianist", "unconquerable", "Anicetus."],
+        typeSpeed: 50,
+        backSpeed: 25,
+        loop: false,
+        backDelay: 1500,
+        startDelay: 1000,
+        onComplete: function(self) { self.cursor.remove() }
+      });
+    </script>
+  </body>
+</html>
