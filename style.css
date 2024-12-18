@@ -58,10 +58,10 @@ li a {
   display: block;
   text-decoration: none;
   padding: 20px;
-  padding-top: 10px;
+  padding-top: 0.75vw;
   padding-bottom: 10px;
   font-weight: bolder;
-  font-size: larger;
+  font-size: 1.5vw;
 }
 
 li:hover {
