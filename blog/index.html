@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About Anicetus</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <script src="https://unpkg.com/typed.js@2.0.16"></script>
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "k3-UxBNVxEHaxlK4u",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<style>
+    #main {
+        margin-right: 15%;
+    }
+
+    #directory {
+        border: 2px solid rgb(0, 19, 70);
+        border-radius: 10px;
+        width: 10%;
+        padding-bottom: 20px;
+        padding-left: 3%;
+        padding-right: 3%;
+        margin-left: 1%;
+        height: 75%;
+        justify-content: center;
+        list-style-type: none;
+    }
+
+    #directory h3 {
+        font-size: 3vw;
+        text-align: center;
+        border-bottom: 2px solid rgb(32, 117, 245);
+        width: fit-content;
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+
+    #directory li {
+        font-size: 1.5vw;
+    }
+
+    #posts {
+        width: 89%;
+        text-align: center;
+        height: fit-content;
+    }
+
+    .post {
+        border: 3px solid rgb(32, 117, 245);
+        border-radius: 10px;
+        width: 670px;
+        max-width: 75%;
+        margin: auto;
+        height: fit-content;
+        position: relative;
+        max-height: 500px;
+        min-height: 200px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+
+    .post-container {
+        display: block;
+        mask-image: linear-gradient(white, transparent 60%);
+    }
+
+    .post p {
+        text-align: left;
+        padding: 10px;
+        font-size: 1.2em;
+    }
+
+    .side-margins {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+
+    #contact {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 20%;
+        padding-right: 20%;
+        border-top: 2px solid rgb(0, 19, 70);
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    #contact h1 {
+        margin: auto;
+        margin-top: 15%;
+        margin-bottom: 5%;
+        font-size: 3vw;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #contact-form input {
+        border: 2px solid rgb(0, 19, 70);
+        border-radius: 5px;
+        padding: 0.5%;
+        margin-top: 5px;
+        width: 47%;
+        display: inline;
+        font-weight: 500;
+        font-size: 1.5vw;
+    }
+
+    #contact-form textarea {
+        display: block;
+        margin-top: 5px;
+        width: 97%;
+        height: 5em;
+        resize: none;
+        border: 2px solid rgb(0, 19, 70);
+        border-radius: 5px;
+        font-weight: 800;
+        font-size: 1.5vw;
+        padding: 5px;
+    }
+
+    #send {
+        width: 97% !important;
+        margin: 5px;
+        font-size: 1.5vw;
+        background-color: rgb(255, 196, 0);
+        cursor: pointer;
+    }
+</style>
+
+<body style="margin: 0%;">
+
+    <ul id="navbar">
+        <a href="/"><img src="/images/widelogo.png" alt="Anicetus" id="homebut" style="width: 15%; height: auto;"></a>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/accomplishments">Accomplishments</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+
+    <div id="main" style="display: flex;">
+
+        <ul id="directory">
+            <h3>2024</h3>
+            <li><a href="#latest">December</a></li>
+        </ul>
+
+        <div id="posts">
+            <h1 id="latest">Latest Posts</h1>
+
+            <!-- <div class="post">
+                <div class="post-container">
+                    <h3><a href="">Post</a></h3>
+                    <span>*******</span>
+                    <p>content</p>
+                </div>
+            </div> -->
+
+            <div class="post">
+                <div class="post-container">
+                    <h3><a href="./12102024/">Hello World!</a></h3>
+                    <span>12/20/2024</span>
+                    <p>Hey! This is Anicetus.</p>
+                    <p>Welcome to my blog. Here, I'll be posting all the stuff I'm doing, what I'm up to, and so forth.
+                    </p>
+                    <p>I <i>plan</i> to post at least every week, but that may change. I'm currently on Christmas break,
+                        so
+                        I have much more time to do this kind of thing.</p>
+                    <p>So, without further ado, let me introduce myself! As you may already know, I'm a teenager living
+                        in
+                        America. I love to code and build/tinker/cause fires with electronics. I've been an avid coder
+                        since
+                        before I can remember, but recently (2023, early 2024) I've kind of... put coding on hold, you
+                        know?
+                    </p>
+                    <p>What got me back interested?</p>
+                    <p>Hack Club. Hack Club is an awesome communtity of hackers and coders, and I was referred to it by
+                        a
+                        friend. I love it so much! I know I sound like a commercial, but I can't help it. If you're 18
+                        or
+                        under, code or like electronics, and live somewhere on Earth, you're eligible!</p>
+                    <p>Speaking of Hack Club, one of the biggest things I'm working on is its High Seas program, which
+                        is
+                        essentially a program where you code projects, which face off against another person's project.
+                        Other people vote on which one is better, and the more votes you get, the more coins, or
+                        doubloons
+                        you get. Then the doubloons are multiplied by the hours you spent coding!</p>
+                    <p>These doubloons are currency in a shop with tons of cool stuff. At the time of writing, I have
+                        almost
+                        1000! And yes, this blog is one of my projects.</p>
+                    <p>Wow! That was a lot about Hack Club. Let me talk about something else now...</p>
+                    <p>Another project I've got (on hold due to High Seas) is that I'm building a custom drone, complete
+                        with pro racing motors and an FPV camera! I intend to give it a basic AI functionality to make
+                        it
+                        self-flying as well! But, like I said, I'm waiting until after High Seas to work more on it, as
+                        I
+                        want them doubloons.</p>
+                </div>
+
+
+            </div>
+            
+        </div>
+
+
+
+    </div>
+
+    <div id="contact">
+        <h1>Want to talk? Learn more about me?</h1>
+        <form id="contact-form">
+            <input type="hidden" name="contact_number" value="000001">
+            <input type="text" name="user_name" placeholder="Name">
+            <input type="email" name="user_email" placeholder="Email Address">
+            <textarea name="message" placeholder="Message"></textarea>
+            <input type="submit" value="Send" id="send" onclick="disable()">
+        </form>
+    </div>
+
+    <footer id="footer">
+        <span>© 2024 By Anicetus</span>
+    </footer>
+
+    <script>
+        var send = document.getElementById("send");
+
+        var typed = new Typed('.typed-text', {
+            strings: ["a coder", "a designer", "a pianist", "unconquerable", "Anicetus.^500"],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: false,
+            backDelay: 1500,
+            startDelay: 1000,
+            onComplete: function (self) { self.cursor.remove() }
+        });
+
+        function disable() {
+            send.disabled = true;
+            send.style.cursor = "inherit";
+            send.value = "Sent! ✓"
+        }
+    </script>
+</body>
+
+</html>

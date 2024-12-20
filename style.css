@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 100px;
+}
+
 :root {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -16,7 +21,7 @@ a:active {
   color: blue;
 }
 
-ul {
+#navbar {
   z-index: 100;
   position: sticky;
   left: 0;
@@ -38,9 +43,10 @@ ul {
   padding-left: 50px;
   padding-right: 20px;
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 
-li {
+#navbar li {
   display: inline;
   float: left;
   margin-top: 15px;
@@ -53,7 +59,7 @@ li {
   transition-duration: 0.5s;
 }
 
-li a {
+#navbar li a {
   color: black !important;
   display: block;
   text-decoration: none;
@@ -64,14 +70,16 @@ li a {
   font-size: 1.5vw;
 }
 
-li:hover {
+#navbar li:hover {
   transform: rotate(-10deg);
   transition-duration: 1s;
 }
 
 #footer {
+  width: 100%;
   background-color: rgb(0,19,70);
-  padding: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   text-align: center;
 }
 

@@ -5,9 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>About Anicetus</title>
-    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <script src="https://unpkg.com/typed.js@2.0.16"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="/style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "k3-UxBNVxEHaxlK4u",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
   </head>
   <style>
     #iam {
@@ -187,6 +208,54 @@
       margin-left: 15%;
       margin-right: 15%;
     }
+
+    #contact {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 20%;
+      padding-right: 20%;
+      border-top: 2px solid rgb(0,19,70);
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+    #contact h1 {
+      margin: auto;
+      margin-top: 15%;
+      margin-bottom: 5%;
+      font-size: 3vw;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    #contact-form input {
+      border: 2px solid rgb(0,19,70);
+      border-radius: 5px;
+      padding: 0.5%;
+      margin-top: 5px;
+      width: 47%;
+      display: inline;
+      font-weight: 500;
+      font-size: 1.5vw;
+    }
+    #contact-form textarea {
+      display: block;
+      margin-top: 5px;
+      width: 97%;
+      height: 5em;
+      resize: none;
+      border: 2px solid rgb(0,19,70);
+      border-radius: 5px;
+      font-weight: 800;
+      font-size: 1.5vw;
+      padding: 5px;
+    }
+    #send {
+      width: 97% !important;
+      margin: 5px;
+      font-size: 1.5vw;
+      background-color: rgb(255, 196, 0);
+      cursor: pointer;
+    }
   </style>
 
   <body style="margin: 0%;">
@@ -204,26 +273,25 @@
       </div>
   
       <div id="subheader">I'm an American teenager who loves coding and working with electronics.<br>Learn more about me!</div>
-
-      <img src="./images/arrows.png" alt="" id="arrows">
+      <img src="/images/arrows.png" alt="" id="arrows">
 
       <div>
         <h1 class="things" id="thing-1">Some things I've done...</h1>
       
-        <img src="./images/wave.png" alt="" class="wave">
+        <img src="/images/wave.png" alt="" class="wave">
 
         <div style="display: flex;" class="dark">
           <div class="wborder">
             <h2 style="width: fit-content;"><a href="https://easy-qmk.vercel.app/">EasyQMK</a></h2>
-            <a href="https://easy-qmk.vercel.app/"><img src="./images/EasyQMK.png" alt="EasyQMK's Key Setup Page" style="width: 95%; height: auto;"></a>
+            <a href="https://easy-qmk.vercel.app/"><img src="/images/EasyQMK.png" alt="EasyQMK's Key Setup Page" style="width: 95%; height: auto;"></a>
           </div>
           <div class="wborder">
             <h2 style="width: fit-content;"><a href="https://invictus-anic3tus.github.io/MathSite">MathSite</a></h2>
-            <a href="https://invictus-anic3tus.github.io/MathSite"><img src="./images/MathSite.png" alt="MathSite image" style="width: 95%; height: auto;"></a>
+            <a href="https://invictus-anic3tus.github.io/MathSite"><img src="/images/MathSite.png" alt="MathSite image" style="width: 95%; height: auto;"></a>
           </div>
           <div class="wborder">
             <h2 style="width: fit-content;"><a href="https://github.com/hackclub/hackpad/tree/main/hackpads/Anipad">Anipad</a></h2>
-            <a href="https://github.com/hackclub/hackpad/tree/main/hackpads/Anipad"><img src="./images/Anipad.png" alt="Fix meeeeeee" style="width: 95%; height: auto;"></a>
+            <a href="https://github.com/hackclub/hackpad/tree/main/hackpads/Anipad"><img src="/images/Anipad.png" alt="Fix meeeeeee" style="width: 95%; height: auto;"></a>
           </div>
         </div>
 
@@ -232,17 +300,17 @@
         <div style="display: flex;" class="dark">
           <div class="wborder">
             <h2 style="width: fit-content;"><a href="https://easy-qmk.vercel.app/">Hackpad V2</a></h2>
-            <a href="https://hackpad.hackclub.com/"><img src="./images/soon.png" alt="Coming Soon!" style="width: 95%; height: auto;"></a>
+            <a href="https://hackpad.hackclub.com/"><img src="/images/soon.png" alt="Coming Soon!" style="width: 95%; height: auto;"></a>
           </div>
           <div class="wborder">
-            <h2 style="width: fit-content;"><a href="./">Drone Project</a></h2>
-            <img src="./images/drone.png" alt="MathSite image" style="width: 95%; height: auto;">
+            <h2 style="width: fit-content;"><a href="/">Drone Project</a></h2>
+            <img src="/images/drone.png" alt="MathSite image" style="width: 95%; height: auto;">
           </div>
         </div>
 
-        <p id="more">Read about these, and more, in my <a href="./blog">blog!</a></p>
+        <p id="more">Read about these, and more, in my <a href="/blog">blog!</a></p>
 
-        <img src="./images/wave.png" alt="" class="wave-ud">
+        <img src="/images/wave.png" alt="" class="wave-ud">
       </div>
 
       <div class="side-margins">
@@ -280,42 +348,56 @@
         <h2 style="text-align: center; font-size: 3vw; margin-top: 100px;">... and some things I enjoy.</h2>
 
         <div style="display: flex; justify-content: center;">
-          <div style="display: flex; justify-content: center; flex-direction: column;">
-            <div style="display: flex; justify-content: center;">
-              <div class="hborder">
-                <h2 style="width: fit-content;">Piano</h2>
-                <p>I've played my whole life!</p>
-              </div>
-              <div class="hborder">
-                <h2 style="width: fit-content; padding-top: 3% !important;">Coding</h2>
-                <p>I've always loved to make fun and useful stuff.</p>
-              </div>
-            </div>
-
-            <div class="hborder">
-              <h2 style="width: fit-content;">Hack Clubbing</h2>
-              <p><a href="https://hack.club">Hack Club</a> is an awesome community for teenagers all over the world. It has thousands of code-loving and electronics-loving people, and they run tons of programs that I love participating in.</p>
-            </div>
-
-          </div>
-
           
           <div class="hborder" id="piano">
-            <h2 style="width: 25%">3D Printing</h2>
-            <p>I have an Anycubic Kobra 2 Neo, decked out with Klipper on a Raspberry Pi, fine tuned for speed. I like designing my own models, both functional and aesthetic.</p>
+            <h2 style="width: 25%">Piano Playing</h2>
+            <p>I'm a regular player for a small church (like 16 people), and I play monthly at my youth on wednesday nights! I love being able to use my talents like that.</p>
           </div>
+          
+          <div style="display: flex; justify-content: center; flex-direction: column;">
+            <div class="hborder">
+              <h2 style="width: fit-content;">Science!</h2>
+              <p>I LOVE atomic chemistry. Quantum physics and the math behind it is super fascinating to me. I also enjoy learning more about math and how everything fits together just right.</p>
+            </div>
+            <div style="display: flex; justify-content: center;">
+              <div class="hborder">
+                <h2 style="width: fit-content;">Reading</h2>
+                <p>I love science fiction books, some of my favs being the Ender's Game and Hitchhiker's Guide to the Galaxy series.</p>
+              </div>
+              <div class="hborder">
+                <h2 style="width: fit-content; padding-top: 3% !important;">Electronics Projects</h2>
+                <p>Anything with circuits, 3D printed parts, and code!</p>
+              </div>
+            </div>
+
+
+          </div>
+
 
         </div>
 
       </div>
 
+      <div id="contact">
+        <h1>Want to talk? Learn more about me?</h1>
+        <form id="contact-form">
+          <input type="hidden" name="contact_number" value="000001">
+          <input type="text" name="user_name" placeholder="Name">
+          <input type="email" name="user_email" placeholder="Email Address">
+          <textarea name="message" placeholder="Message"></textarea>
+          <input type="submit" value="Send" id="send" onclick="disable()">
+        </form>
+      </div>
+
     </div>
 
-    <div id="footer">
+    <footer id="footer">
       <span>© 2024 By Anicetus</span>
-    </div>
+    </footer>
 
     <script>
+      var send = document.getElementById("send");
+
       var typed = new Typed('.typed-text', {
         strings: ["a coder", "a designer", "a pianist", "unconquerable", "Anicetus.^500"],
         typeSpeed: 50,
@@ -325,6 +407,12 @@
         startDelay: 1000,
         onComplete: function(self) { self.cursor.remove() }
       });
+
+      function disable() {
+        send.disabled = true;
+        send.style.cursor = "inherit";
+        send.value = "Sent! ✓"
+      }
     </script>
   </body>
 </html>
