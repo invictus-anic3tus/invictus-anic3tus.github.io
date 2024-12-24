@@ -1,0 +1,34 @@
+#navbar {
+  height: 10%;
+}
+#navbar li a {
+  font-size: 3.5vw;
+  padding: 5px;
+  margin: 0;
+}
+#homebut {
+  padding: 10px;
+  margin: 0;
+  width: 30%;
+  height: auto;
+}
+
+#contact {
+  padding: 2%;
+}
+
+#contact h1 {
+  font-size: 4vw;
+}
+
+#contact-form input {
+  font-size: 1.5em;
+  font-weight: 400;
+  display: block;
+  width: 98%;
+}
+
+#contact-form textarea {
+  font-size: 1.7em;
+  font-weight: 400;
+}

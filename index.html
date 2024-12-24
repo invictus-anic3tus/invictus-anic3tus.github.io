@@ -1,297 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>About Anicetus</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <script src="https://unpkg.com/typed.js@2.0.16"></script>
-    <link rel="stylesheet" href="/style.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            emailjs.init({
-                publicKey: "k3-UxBNVxEHaxlK4u",
-            });
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function () {
-            document.getElementById('contact-form').addEventListener('submit', function (event) {
-                event.preventDefault();
-                emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
-            });
-        }
-    </script>
-  </head>
-  <style>
-    #iam {
-      margin-left: 25%;
-      margin-right: 25%;
-      margin-top: 100px;
-      text-align: center;
-      font-size: 4vw;
-    }
-    #iam span:not(.typed-text) {
-      color: black;
-    }
 
-    .typed-text {
-      color: rgb(32, 117, 245);
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>About Anicetus</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <script src="https://unpkg.com/typed.js@2.0.16"></script>
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" media="screen and (min-width: 800px)" href="/mobile.css">
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init({
+        publicKey: "k3-UxBNVxEHaxlK4u",
+      });
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault();
+        emailjs.sendForm('contact_service', 'contact_form', this)
+          .then(() => {
+            console.log('SUCCESS!');
+          }, (error) => {
+            console.log('FAILED...', error);
+          });
+      });
+    }
+  </script>
+</head>
+<style>
+  #iam {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 4vw;
+  }
+
+  #iam span:not(.typed-text) {
+    color: black;
+  }
+
+  .typed-text {
+    color: rgb(32, 117, 245);
+  }
+
+  #subheader {
+    margin: auto;
+    margin-top: 5em;
+    text-align: center;
+    width: 35%;
+    font-size: 1.5vw;
+  }
+
+  .wave-ud {
+    width: 100%;
+    height: auto;
+    left: 0px;
+    margin-top: -1px;
+    z-index: 3;
+    display: block;
+
+    transform: rotateZ(180deg);
+  }
+
+  .things {
+    background-color: rgb(0, 19, 70);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    min-width: fit-content;
+    font-size: 3vw;
+    z-index: 8;
+  }
+
+  #thing-1 {
+    background-color: transparent;
+    margin-top: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    position: absolute;
+  }
+
+  #thing-2 {
+    margin: 0;
+    padding: 100px;
+  }
+
+  .dark div,
+  p {
+    color: white;
+    font-size: larger;
+    text-align: center;
+  }
+
+  .dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -2px;
+    background-color: rgb(0, 19, 70);
+  }
+
+  .wborder {
+    border: 4px solid rgb(32, 117, 245);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+    padding: 10px;
+    display: block;
+
+    width: 20%;
+    min-width: 100px;
+    height: 30%;
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .wborder h2 {
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding: 2%;
+    font-size: 2vw;
+  }
+
+  .hborder {
+    border: 4px solid rgb(32, 117, 245);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+    padding: 10px;
+    padding-top: 0;
+    display: block;
+
+    width: fit-content;
+    min-width: 100px;
+    max-width: 100%;
+    height: fit-content;
+
+    margin: 10px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hborder h2 {
+    margin: auto;
+    border-bottom: 2px solid black;
+    display: block;
+    text-align: center;
+    margin-top: 2%;
+    padding: 30%;
+    padding-top: 3px;
+    padding-bottom: 0;
+    font-size: 1.5vw;
+  }
+
+  .hborder p {
+    color: black;
+    font-size: 1.5vw;
+  }
+
+  #threed-printing {
+    width: 50%;
+  }
+
+  #piano {
+    width: 50%;
+  }
+
+  .wborder img {
+    border: 4px solid rgb(255, 196, 0);
+    border-radius: 10px;
+  }
+
+  #more {
+    background-color: rgb(0, 19, 70);
+    margin: 0;
+    padding-top: 50px;
+    font-size: 2.5vw;
+    padding-bottom: 10px;
+  }
+
+  #more a {
+    border: 2px solid rgb(32, 117, 245);
+    background-color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    margin: 4px;
+    padding: 5px;
+  }
+
+  .side-margins {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  #contact {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20%;
+    padding-right: 20%;
+    border-top: 2px solid rgb(0, 19, 70);
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  #contact h1 {
+    margin: auto;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    font-size: 3vw;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #contact-form input {
+    border: 2px solid rgb(0, 19, 70);
+    border-radius: 5px;
+    padding: 0.5%;
+    margin-top: 5px;
+    width: 47%;
+    display: inline;
+    font-weight: 500;
+    font-size: 1.5vw;
+  }
+
+  #contact-form textarea {
+    display: block;
+    margin-top: 5px;
+    width: 97%;
+    height: 5em;
+    resize: none;
+    border: 2px solid rgb(0, 19, 70);
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: 1.5vw;
+    padding: 5px;
+  }
+
+  #send {
+    width: 97% !important;
+    margin: 5px;
+    font-size: 1.5vw;
+    background-color: rgb(255, 196, 0);
+    cursor: pointer;
+  }
+
+  @media (max-width: 800px) {
+
+    #iam {
+      font-size: 7vw;
+      margin-left: 0%;
+      margin-right: 0%;
     }
 
     #subheader {
-      margin: auto;
-      margin-top: 5em;
-      text-align: center;
-      width: 35%;
-      font-size: 1.5vw;
-    }
-
-    #arrows {
-      width: 4%;
-      height: auto;
-      margin-left: 48%;
-      margin-right: 48%;
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
-
-    .wave {
-      width: 100%;
-      height: auto;
-      left: 0px;
-      z-index: 3;
-      display: block;
-    }
-    .wave-ud {
-      width: 100%;
-      height: auto;
-      left: 0px;
-      margin-top: -1px;
-      z-index: 3;
-      display: block;
-
-      transform: rotateZ(180deg);
+      font-size: 3.5vw;
+      width: 70%;
     }
 
     .things {
-      background-color: rgb(0,19,70);
-      text-align: center;
-      color: rgb(255, 255, 255);
-      min-width: fit-content;
-      font-size: 3vw;
-      z-index: 8;
+      font-size: 4.5vw;
+      width: auto;
+      margin-left: 12.5%;
+      margin-right: 12.5%;
+      margin: auto;
+      background-color: rgb(0, 19, 70);
     }
 
     #thing-1 {
-      background-color: transparent;
-      margin-top: 20%;
-      margin-left: 25%;
-      margin-right: 25%;
-      width: 50%;
-      position: absolute;
-    }
-
-    #thing-2 {
-      margin: 0;
-      padding: 100px;
-    }
-
-    .dark div, p {
-      color: white;
-      font-size: larger;
-      text-align: center;
-    }
-    .dark {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: -2px;
-      background-color: rgb(0,19,70);
-    }
-
-    .wborder {
-      border: 4px solid rgb(32, 117, 245);
-      background-color: rgb(255, 255, 255);
-      border-radius: 10px;
-
-      padding: 10px;
-      display: block;
-
-      width: 20%;
-      min-width: 100px;
-      height: 30%;
-      margin: 10px;
-      text-align: center;
-      justify-content: center;
-    }
-
-    .wborder h2 {
-      margin: auto;
-      display: block;
-      text-align: center;
-      padding: 2%;
-      font-size: 2vw;
-    }
-
-    .hborder {
-      border: 4px solid rgb(32, 117, 245);
-      background-color: rgb(255, 255, 255);
-      border-radius: 10px;
-
-      padding: 10px;
-      padding-top: 0;
-      display: block;
-
-      width: fit-content;
-      min-width: 100px;
-      max-width: 100%;
-      height: fit-content;
-      
-      margin: 10px;
-      text-align: center;
-      justify-content: center;
-    }
-
-    .hborder h2 {
-      margin: auto;
-      border-bottom: 2px solid black;
-      display: block;
-      text-align: center;
-      margin-top: 2%;
-      padding: 30%;
-      padding-top: 3px;
-      padding-bottom: 0;
-      font-size: 1.5vw;
-    }
-    .hborder p {
-      color: black;
-      font-size: 1.5vw;
-    }
-
-    #threed-printing {
-      width: 50%;
-    }
-    #piano {
-      width: 50%;
-    }
-
-    .wborder img {
-      border: 4px solid rgb(255, 196, 0);
-      border-radius: 10px;
+      width: 75%;
+      margin-left: 12.5%;
     }
 
     #more {
-      background-color: rgb(0,19,70);
-      margin: 0;
-      padding-top: 50px;
-      font-size: 2.5vw;
-      padding-bottom: 10px;
+      font-size: 4vw;
     }
-    #more a {
-      border: 2px solid rgb(32, 117, 245);
-      background-color: white;
-      border-radius: 10px;
-      text-decoration: none;
-      margin: 4px;
-      padding: 5px;
+
+    .dark {
+      display: block !important;
+      align-items: center;
+      margin: 0%;
+    }
+
+    .wborder {
+      text-align: center;
+      align-self: center;
+      margin: 0%;
+      width: 90%;
+      margin: auto;
+      margin-bottom: 10%;
     }
 
     .side-margins {
-      margin-left: 15%;
-      margin-right: 15%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .side-margins h2 {
+      font-size: 5vw !important;
+    }
+    .side-margins div {
+      display: block !important;
+    }
+    .hborder {
+      margin-right: 0;
+      width: auto !important;
+    }
+    .hborder p {
+      font-size: 3vw;
     }
 
     #contact {
-      margin-left: 0;
-      margin-right: 0;
-      padding-left: 20%;
-      padding-right: 20%;
-      border-top: 2px solid rgb(0,19,70);
-      margin-top: 100px;
-      margin-bottom: 100px;
+      padding: 2%;
     }
+
     #contact h1 {
-      margin: auto;
-      margin-top: 15%;
-      margin-bottom: 5%;
-      font-size: 3vw;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
+      font-size: 4vw;
     }
+
     #contact-form input {
-      border: 2px solid rgb(0,19,70);
-      border-radius: 5px;
-      padding: 0.5%;
-      margin-top: 5px;
-      width: 47%;
-      display: inline;
-      font-weight: 500;
-      font-size: 1.5vw;
-    }
-    #contact-form textarea {
+      font-size: 1.5em;
+      font-weight: 400;
       display: block;
-      margin-top: 5px;
-      width: 97%;
-      height: 5em;
-      resize: none;
-      border: 2px solid rgb(0,19,70);
-      border-radius: 5px;
-      font-weight: 800;
-      font-size: 1.5vw;
-      padding: 5px;
+      width: 98%;
     }
-    #send {
-      width: 97% !important;
-      margin: 5px;
-      font-size: 1.5vw;
-      background-color: rgb(255, 196, 0);
-      cursor: pointer;
+
+    #contact-form textarea {
+      font-size: 1.7em;
+      font-weight: 400;
     }
-  </style>
+  }
+</style>
 
-  <body style="margin: 0%;">
+<body style="margin: 0%;">
 
-    <ul id="navbar">
-      <a href="/"><img src="/images/widelogo.png" alt="Anicetus" id="homebut" style="width: 15%; height: auto;"></a>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/accomplishments">Accomplishments</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
+  <ul id="navbar">
+    <a href="/"><img src="/images/widelogo.png" alt="Anicetus" id="homebut"></a>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/accomplishments">Accomplishments</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
 
-    <div id="main">
-      <div id="iam">
-        <span>I am </span><span class="typed-text"></span>
-      </div>
-  
-      <div id="subheader">I'm an American teenager who loves coding and working with electronics.<br>Learn more about me!</div>
-      <img src="/images/arrows.png" alt="" id="arrows">
+  <div id="main">
+    <div id="iam">
+      <span>I am </span><span class="typed-text"></span>
+    </div>
 
-      <div>
-        <h1 class="things" id="thing-1">Some things I've done...</h1>
-      
-        <img src="/images/wave.png" alt="" class="wave">
+    <div id="subheader">I'm an American teenager who loves coding and working with electronics.<br>Learn more about me!
+    </div>
+    <img src="/images/arrows.png" alt="" id="arrows">
+
+    <div>
+      <h1 class="things" id="thing-1">Some things I've done...</h1>
+
+      <img src="/images/wave.png" alt="" class="wave">
+
+      <div style="background-color: rgb(0,19,70);">
 
         <div style="display: flex;" class="dark">
           <div class="wborder">
             <h2 style="width: fit-content;"><a href="https://easy-qmk.vercel.app/">EasyQMK</a></h2>
-            <a href="https://easy-qmk.vercel.app/"><img src="/images/EasyQMK.png" alt="EasyQMK's Key Setup Page" style="width: 95%; height: auto;"></a>
+            <a href="https://easy-qmk.vercel.app/"><img src="/images/EasyQMK.png" alt="EasyQMK's Key Setup Page"
+                style="width: 95%; height: auto;"></a>
           </div>
           <div class="wborder">
             <h2 style="width: fit-content;"><a href="https://invictus-anic3tus.github.io/MathSite">MathSite</a></h2>
-            <a href="https://invictus-anic3tus.github.io/MathSite"><img src="/images/MathSite.png" alt="MathSite image" style="width: 95%; height: auto;"></a>
+            <a href="https://invictus-anic3tus.github.io/MathSite"><img src="/images/MathSite.png" alt="MathSite image"
+                style="width: 95%; height: auto;"></a>
           </div>
           <div class="wborder">
-            <h2 style="width: fit-content;"><a href="https://github.com/hackclub/hackpad/tree/main/hackpads/Anipad">Anipad</a></h2>
-            <a href="https://github.com/hackclub/hackpad/tree/main/hackpads/Anipad"><img src="/images/Anipad.png" alt="Fix meeeeeee" style="width: 95%; height: auto;"></a>
+            <h2 style="width: fit-content;"><a
+                href="https://github.com/hackclub/hackpad/tree/main/hackpads/Anipad">Anipad</a></h2>
+            <a href="https://github.com/hackclub/hackpad/tree/main/hackpads/Anipad"><img src="/images/soon.png"
+                alt="Fix meeeeeee" style="width: 95%; height: auto;"></a>
           </div>
         </div>
 
@@ -300,7 +391,8 @@
         <div style="display: flex;" class="dark">
           <div class="wborder">
             <h2 style="width: fit-content;"><a href="https://easy-qmk.vercel.app/">Hackpad V2</a></h2>
-            <a href="https://hackpad.hackclub.com/"><img src="/images/soon.png" alt="Coming Soon!" style="width: 95%; height: auto;"></a>
+            <a href="https://hackpad.hackclub.com/"><img src="/images/soon.png" alt="Coming Soon!"
+                style="width: 95%; height: auto;"></a>
           </div>
           <div class="wborder">
             <h2 style="width: fit-content;"><a href="/">Drone Project</a></h2>
@@ -310,109 +402,118 @@
 
         <p id="more">Read about these, and more, in my <a href="/blog">blog!</a></p>
 
-        <img src="/images/wave.png" alt="" class="wave-ud">
       </div>
 
-      <div class="side-margins">
-        <h2 style="text-align: center; font-size: 3vw;">Some hobbies I've picked up...</h2>
+      <img src="/images/wave.png" alt="" class="wave-ud">
+    </div>
 
-        <div style="display: flex; justify-content: center;">
-          <div style="display: flex; justify-content: center; flex-direction: column;">
-            <div style="display: flex; justify-content: center;">
-              <div class="hborder">
-                <h2 style="width: fit-content;">Piano</h2>
-                <p>I've played my whole life!</p>
-              </div>
-              <div class="hborder">
-                <h2 style="width: fit-content; padding-top: 3% !important;">Coding</h2>
-                <p>I've always loved to make fun and useful stuff.</p>
-              </div>
-            </div>
+    <div class="side-margins">
+      <h2 style="text-align: center; font-size: 3vw;">Some hobbies I've picked up...</h2>
 
+      <div style="display: flex; justify-content: center;">
+        <div style="display: flex; justify-content: center; flex-direction: column;">
+          <div style="display: flex; justify-content: center;">
             <div class="hborder">
-              <h2 style="width: fit-content;">Hack Clubbing</h2>
-              <p><a href="https://hack.club">Hack Club</a> is an awesome community for teenagers all over the world. It has thousands of code-loving and electronics-loving people, and they run tons of programs that I love participating in.</p>
+              <h2 style="width: fit-content;">Piano</h2>
+              <p>I've played my whole life!</p>
             </div>
-
+            <div class="hborder">
+              <h2 style="width: fit-content; padding-top: 3% !important;">Coding</h2>
+              <p>I've always loved to make fun and useful stuff.</p>
+            </div>
           </div>
 
-          
-          <div class="hborder" id="threed-printing">
-            <h2 style="width: 25%">3D Printing</h2>
-            <p>I have an Anycubic Kobra 2 Neo, decked out with Klipper on a Raspberry Pi, fine tuned for speed. I like designing my own models, both functional and aesthetic.</p>
+          <div class="hborder">
+            <h2 style="width: fit-content;">Hack Clubbing</h2>
+            <p><a href="https://hack.club">Hack Club</a> is an awesome community for teenagers all over the world. It
+              has thousands of code-loving and electronics-loving people, and they run tons of programs that I love
+              participating in.</p>
           </div>
 
         </div>
 
 
-        <h2 style="text-align: center; font-size: 3vw; margin-top: 100px;">... and some things I enjoy.</h2>
+        <div class="hborder" id="threed-printing">
+          <h2 style="width: 25%">3D Printing</h2>
+          <p>I have an Anycubic Kobra 2 Neo, decked out with Klipper on a Raspberry Pi, fine tuned for speed. I like
+            designing my own models, both functional and aesthetic.</p>
+        </div>
 
-        <div style="display: flex; justify-content: center;">
-          
-          <div class="hborder" id="piano">
-            <h2 style="width: 25%">Piano Playing</h2>
-            <p>I'm a regular player for a small church (like 16 people), and I play monthly at my youth on wednesday nights! I love being able to use my talents like that.</p>
+      </div>
+
+
+      <h2 style="text-align: center; font-size: 3vw; margin-top: 100px;">... and some things I enjoy.</h2>
+
+      <div style="display: flex; justify-content: center;">
+
+        <div class="hborder" id="piano">
+          <h2 style="width: 25%">Piano Playing</h2>
+          <p>I'm a regular player for a small church (like 16 people), and I play monthly at my youth on wednesday
+            nights! I love being able to use my talents like that.</p>
+        </div>
+
+        <div style="display: flex; justify-content: center; flex-direction: column;">
+          <div class="hborder">
+            <h2 style="width: fit-content;">Science!</h2>
+            <p>I LOVE atomic chemistry. Quantum physics and the math behind it is super fascinating to me. I also enjoy
+              learning more about math and how everything fits together just right.</p>
           </div>
-          
-          <div style="display: flex; justify-content: center; flex-direction: column;">
+          <div style="display: flex; justify-content: center;">
             <div class="hborder">
-              <h2 style="width: fit-content;">Science!</h2>
-              <p>I LOVE atomic chemistry. Quantum physics and the math behind it is super fascinating to me. I also enjoy learning more about math and how everything fits together just right.</p>
+              <h2 style="width: fit-content;">Reading</h2>
+              <p>I love science fiction books, some of my favs being the Ender's Game and Hitchhiker's Guide to the
+                Galaxy series.</p>
             </div>
-            <div style="display: flex; justify-content: center;">
-              <div class="hborder">
-                <h2 style="width: fit-content;">Reading</h2>
-                <p>I love science fiction books, some of my favs being the Ender's Game and Hitchhiker's Guide to the Galaxy series.</p>
-              </div>
-              <div class="hborder">
-                <h2 style="width: fit-content; padding-top: 3% !important;">Electronics Projects</h2>
-                <p>Anything with circuits, 3D printed parts, and code!</p>
-              </div>
+            <div class="hborder">
+              <h2 style="width: fit-content; padding-top: 3% !important;">Electronics Projects</h2>
+              <p>Anything with circuits, 3D printed parts, and code!</p>
             </div>
-
-
           </div>
 
 
         </div>
 
-      </div>
 
-      <div id="contact">
-        <h1>Want to talk? Learn more about me?</h1>
-        <form id="contact-form">
-          <input type="hidden" name="contact_number" value="000001">
-          <input type="text" name="user_name" placeholder="Name">
-          <input type="email" name="user_email" placeholder="Email Address">
-          <textarea name="message" placeholder="Message"></textarea>
-          <input type="submit" value="Send" id="send" onclick="disable()">
-        </form>
       </div>
 
     </div>
 
-    <footer id="footer">
-      <span>© 2024 By Anicetus</span>
-    </footer>
+    <div id="contact">
+      <h1>Want to talk? Learn more about me?</h1>
+      <form id="contact-form">
+        <input type="hidden" name="contact_number" value="000001">
+        <input type="text" name="user_name" placeholder="Name">
+        <input type="email" name="user_email" placeholder="Email Address">
+        <textarea name="message" placeholder="Message"></textarea>
+        <input type="submit" value="Send" id="send" onclick="disable()">
+      </form>
+    </div>
 
-    <script>
-      var send = document.getElementById("send");
+  </div>
 
-      var typed = new Typed('.typed-text', {
-        strings: ["a coder", "a designer", "a pianist", "unconquerable", "Anicetus.^500"],
-        typeSpeed: 50,
-        backSpeed: 25,
-        loop: false,
-        backDelay: 1500,
-        startDelay: 1000,
-        onComplete: function(self) { self.cursor.remove() }
-      });
+  <footer id="footer">
+    <span>© 2024 By Anicetus</span>
+  </footer>
 
-      function disable() {
-        send.disabled = true;
-        send.style.cursor = "inherit";
-        send.value = "Sent! ✓"
-      }
-    </script>
-  </body>
+  <script>
+    var send = document.getElementById("send");
+
+    var typed = new Typed('.typed-text', {
+      strings: ["a coder", "a designer", "a pianist", "unconquerable", "Anicetus.^500"],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: false,
+      backDelay: 1500,
+      startDelay: 1000,
+      onComplete: function (self) { self.cursor.remove() }
+    });
+
+    function disable() {
+      send.disabled = true;
+      send.style.cursor = "inherit";
+      send.value = "Sent! ✓"
+    }
+  </script>
+</body>
+
 </html>

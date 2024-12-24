@@ -9,6 +9,9 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <script src="https://unpkg.com/typed.js@2.0.16"></script>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" media="screen and (min-width: 800px)" href="/mobile.css">
+
+    
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
@@ -149,12 +152,67 @@
         background-color: rgb(255, 196, 0);
         cursor: pointer;
     }
+
+    @media (max-width: 800px) {
+        #contact {
+            padding: 2%;
+        }
+        #contact h1 {
+            font-size: 4vw;
+        }
+        #contact-form input {
+            font-size: 1.5em;
+            font-weight: 400;
+            display: block;
+            width: 98%;
+        }
+        #contact-form textarea {
+            font-size: 1.7em;
+            font-weight: 400;
+        }
+        #directory {
+            width: 75%;
+            margin: auto;
+            text-align: center;
+        }
+        #directory h3 {
+            padding: 0%;
+            padding-top: 10px;
+            text-align: center;
+            margin: auto;
+            font-size: 7vw !important;
+            width: 100%;
+        }
+        #directory li {
+            padding-top: 5%;
+            font-size: 5vw !important;
+        }
+        #posts {
+            width: 100%;
+            margin: auto;
+        }
+        .post {
+            width: 95%;
+        }
+        #latest {
+            text-align: center;
+        }
+        #main {
+            display: block !important;
+            margin: 0;
+            width: 100%;
+            padding: 0%;
+        }
+        #directory h3 {
+            font-size: 4vw;
+        }
+    }
 </style>
 
 <body style="margin: 0%;">
 
     <ul id="navbar">
-        <a href="/"><img src="/images/widelogo.png" alt="Anicetus" id="homebut" style="width: 15%; height: auto;"></a>
+        <a href="/"><img src="/images/widelogo.png" alt="Anicetus" id="homebut"></a>
         <li><a href="/blog">Blog</a></li>
         <li><a href="/accomplishments">Accomplishments</a></li>
         <li><a href="/contact">Contact</a></li>
@@ -180,7 +238,7 @@
 
             <div class="post">
                 <div class="post-container">
-                    <h3><a href="./12102024/">Hello World!</a></h3>
+                    <h3><a href="./2024/12/20/">Hello World!</a></h3>
                     <span>12/20/2024</span>
                     <p>Hey! This is Anicetus.</p>
                     <p>Welcome to my blog. Here, I'll be posting all the stuff I'm doing, what I'm up to, and so forth.
@@ -246,15 +304,15 @@
     <script>
         var send = document.getElementById("send");
 
-        var typed = new Typed('.typed-text', {
-            strings: ["a coder", "a designer", "a pianist", "unconquerable", "Anicetus.^500"],
-            typeSpeed: 50,
-            backSpeed: 25,
-            loop: false,
-            backDelay: 1500,
-            startDelay: 1000,
-            onComplete: function (self) { self.cursor.remove() }
-        });
+        // var typed = new Typed('.typed-text', {
+        //     strings: ["a coder", "a designer", "a pianist", "unconquerable", "Anicetus.^500"],
+        //     typeSpeed: 50,
+        //     backSpeed: 25,
+        //     loop: false,
+        //     backDelay: 1500,
+        //     startDelay: 1000,
+        //     onComplete: function (self) { self.cursor.remove() }
+        // });
 
         function disable() {
             send.disabled = true;
