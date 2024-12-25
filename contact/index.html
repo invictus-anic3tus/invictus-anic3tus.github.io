@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About Anicetus</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <script src="https://unpkg.com/typed.js@2.0.16"></script>
+    <link rel="stylesheet" href="/style.css">
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "k3-UxBNVxEHaxlK4u",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+</head>
+<style>
+    body,
+    html {
+        margin: 0%;
+        padding: 0%;
+        height: 100%;
+    }
+
+    body {
+        display: grid;
+    grid-template-rows: auto 1fr auto; /* Navbar, main, footer */
+    min-height: 100vh;
+    margin: 0; /* Remove default margins */
+    }
+
+    #main {
+        margin-left: 5%;
+
+        margin-right: 5%;
+    }
+
+    #main p {
+        font-size: 2vw;
+    }
+
+    #header {
+        text-align: center;
+        font-size: 5vw;
+        margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border-bottom: 2px solid rgb(0, 19, 70);
+    }
+
+    #contact {
+        margin-left: 0;
+        margin-right: 0;
+        /* padding-left: 20%;
+        padding-right: 20%; */
+        margin-top: 10%;
+    }
+
+    #contact h1 {
+        margin: auto;
+        margin-top: 15%;
+        margin-bottom: 5%;
+        font-size: 2.7vw;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #contact-form input {
+        border: 2px solid rgb(0, 19, 70);
+        border-radius: 5px;
+        padding: 0.5%;
+        margin-top: 5px;
+        width: 47%;
+        height: 2em;
+        display: inline;
+        font-weight: 500;
+        font-size: 1.5vw;
+    }
+
+    #contact-form textarea {
+        display: block;
+        margin-top: 5px;
+        width: 97%;
+        height: 5em;
+        resize: none;
+        border: 2px solid rgb(0, 19, 70);
+        border-radius: 5px;
+        font-weight: 800;
+        font-size: 1.5vw;
+        padding: 5px;
+    }
+
+    #send {
+        width: 97% !important;
+        margin: 5px;
+        font-size: 1.5vw;
+        background-color: rgb(255, 196, 0);
+        cursor: pointer;
+    }
+
+    .code {
+        background-color: rgb(255, 196, 0);
+        border-radius: 10px;
+        padding: 3px;
+        color: rgb(0, 19, 70);
+    }
+
+    @media (max-width: 800px) {
+        #main p {
+            font-size: 3vw;
+        }
+        #main {
+            margin: 1%;
+            width: 96vw;
+        }
+
+        #navbar {
+            min-width: 90vw !important;
+        }
+
+        #contact {
+            padding: 2%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        #contact h1 {
+            font-size: 4vw;
+        }
+
+        #contact-form input {
+            font-size: 1.5em;
+            font-weight: 400;
+            display: block;
+            width: 98%;
+        }
+
+        #contact-form textarea {
+            font-size: 1.7em;
+            font-weight: 400;
+        }
+    }
+</style>
+
+<body>
+
+    <ul id="navbar">
+        <a href="/" id="homea"><img src="/images/widelogo.png" alt="Anicetus" id="homebut"></a>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/accomplishments">Accomplishments</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+
+    <div id="main">
+
+        <h1 id="header">Contact</h1>
+
+        <p>Hey! Glad you want to contact (if you want to contact [which would be why you're here (probably)]), and there
+            are a lot of ways to do so. If you'd like the more traditional method of email, you can email me with the
+            contact form below.</p>
+        <p>If you'd rather use Slack (for fellow Hack Clubbers) or Discord, my Slack is <code
+                class="code">@Anicetus</code> and my Discord is <code class="code">anic3tus</code>.</p>
+
+        <div id="contact">
+            <form id="contact-form">
+                <input type="hidden" name="contact_number" value="000001">
+                <input type="text" name="user_name" placeholder="Name">
+                <input type="email" name="user_email" placeholder="Email Address">
+                <textarea name="message" placeholder="Message"></textarea>
+                <input type="submit" value="Send" id="send" onclick="disable()">
+            </form>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <span>© 2024 By Anicetus</span>
+    </footer>
+
+    <script>
+        var send = document.getElementById("send");
+
+        // var typed = new Typed('.typed-text', {
+        //     strings: ["a coder", "a designer", "a pianist", "unconquerable", "Anicetus.^500"],
+        //     typeSpeed: 50,
+        //     backSpeed: 25,
+        //     loop: false,
+        //     backDelay: 1500,
+        //     startDelay: 1000,
+        //     onComplete: function (self) { self.cursor.remove() }
+        // });
+
+        function disable() {
+            send.disabled = true;
+            send.style.cursor = "inherit";
+            send.value = "Sent! ✓"
+        }
+    </script>
+</body>
+
+</html>

@@ -26,35 +26,52 @@ a:active {
   position: sticky;
   left: 0;
   top: 0;
-  width: 100%;
-  list-style-type: none;
+  /* width: 100%; */
+
   /* border: 2px solid;
       border-radius: 10px; */
+      /* overflow: hidden;
+  height: auto !important; */
+
   border-bottom: 3px solid rgb(255, 196, 0);
+
+  list-style: none;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+
+  padding: 10px 20px;
   margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: rgb(255, 255, 255);
+  
+  background: white;
+  flex-wrap: nowrap;
 }
 
 #homebut {
-  display: inline;
-  float: left;
-  padding-left: 50px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  width: 15%;
+  /* display: inline;
+  float: left; */
+  padding: 0%;
+
+  width: 200px;
   height: auto;
+}
+#homea {
+  padding: 0;
+  display: inline-block;
 }
 
 #navbar li {
-  display: inline;
+  /* display: inline;
   float: left;
   margin-top: 15px;
   padding-top: 0px;
   padding-bottom: 0px;
-  width: fit-content;
+  width: fit-content; */
+
+  flex: 0;
+  margin: 0 10px;
+
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
   transform: rotate(0deg);
@@ -63,13 +80,13 @@ a:active {
 
 #navbar li a {
   color: black !important;
-  display: block;
-  text-decoration: none;
+  /* display: block;
   padding: 20px;
   padding-top: 0.75vw;
-  padding-bottom: 10px;
+  padding-bottom: 10px; */
   font-weight: bolder;
-  font-size: 1.5vw;
+  font-size: 1.5em;
+  text-decoration: none;
 }
 
 #navbar li:hover {
@@ -109,20 +126,18 @@ a:active {
 }
 
 @media(max-width: 800px) {
-  #navbar {
-    height: 10%;
-  }
   #navbar li a {
-    font-size: 3.5vw;
+    font-size: 2.5vw;
     padding: 5px;
     margin: 0;
+    overflow: hidden;
   }
-  #homebut {
+  /* #homebut {
     padding: 10px;
     margin: 0;
     width: 30%;
     height: auto;
-  }
+  } */
   
   #contact {
     padding: 2%;
