@@ -9,7 +9,7 @@
     <script src="https://unpkg.com/typed.js@2.0.16"></script>
     <link rel="stylesheet" href="/style.css">
 
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -106,8 +106,24 @@
         margin-right: 15%;
     }
 
+    #mobile {
+        display: none;
+    }
+
 
     @media (max-width: 800px) {
+        #left {
+            display: none;
+        }
+
+        #right {
+            display: none;
+        }
+
+        #mobile {
+            display: flex;
+        }
+
         .scroll-reveal-blank {
             display: none;
             height: 0%;
@@ -121,8 +137,10 @@
             font-size: 2em;
             margin-left: 10%;
             margin-right: 10%;
+            margin-bottom: 10%;
             z-index: 3;
             height: fit-content;
+            opacity: 1;
         }
 
         .dot {
@@ -136,7 +154,7 @@
         #center {
             position: absolute;
             text-align: center;
-            top: 25%;
+            top: 20%;
             height: 65%;
             width: 1%;
             border: 2px solid rgb(255, 255, 255);
@@ -179,19 +197,20 @@
 
                 <div class="dot"></div>
 
-                <div class="scroll-reveal">Well, let's start at the beginning. I've always loved to code, from Scratch and Python as an 8-year old to Javascript and HTML now.</div>
+                <div class="scroll-reveal">Well, let's start at the beginning. I've always loved to code, from Scratch
+                    and Python as an 8-year old to Javascript and HTML now.</div>
 
                 <div class="scroll-reveal-blank"></div>
 
                 <div class="dot"></div>
 
-                <div class="scroll-reveal">Skibidi toilet ohio rizzler sigma skibidi rizzz</div>
+                <div class="scroll-reveal">I'm proficient in most HTML and Javascript, and quickly learning CSS.</div>
 
                 <div class="scroll-reveal-blank"></div>
 
                 <div class="dot"></div>
 
-                <div class="scroll-reveal">hehe</div>
+                <div class="scroll-reveal">On a different note, I'm also a piano player!</div>
 
                 <div class="scroll-reveal-blank"></div>
 
@@ -212,19 +231,20 @@
 
                 <div class="dright"></div>
 
-                <div class="scroll-reveal">Skibidi toilet rizz asdf asdf asdf asddfhi</div>
+                <div class="scroll-reveal">I've used Python and C++ before, and remember them decently!</div>
 
                 <div class="scroll-reveal-blank"></div>
 
                 <div class="dright"></div>
 
-                <div class="scroll-reveal">Erm what</div>
+                <div class="scroll-reveal">My favorite coding project is <a
+                        href="https://easyqmk.vercel.app">EasyQMK,</a> a custom code maker for keyboards.</div>
 
                 <div class="scroll-reveal-blank"></div>
 
                 <div class="dright"></div>
 
-                <div class="scroll-reveal">Hi my name is stupid ugly imbecilic doohickey with a bignormous butt</div>
+                <div class="scroll-reveal">I play</div>
 
                 <div class="scroll-reveal-blank"></div>
 
@@ -232,6 +252,20 @@
 
                 <div class="scroll-reveal">Rizz asdfasdfas asdfnasdf asdf asdf asdf asdf asdf asddfddfasddfasdfahi</div>
 
+            </div>
+
+
+            <div id="mobile" style="flex-direction: column;">
+                <div class="scroll-reveal">Well, let's start at the beginning. I've always loved to code, from Scratch
+                    and Python as an 8-year old to Javascript and HTML now.</div>
+                <div class="scroll-reveal">Well, let's start at the beginning. I've always loved to code, from Scratch
+                    and Python as an 8-year old to Javascript and HTML now.</div>
+                <div class="scroll-reveal">Well, let's start at the beginning. I've always loved to code, from Scratch
+                    and Python as an 8-year old to Javascript and HTML now.</div>
+                <div class="scroll-reveal">Well, let's start at the beginning. I've always loved to code, from Scratch
+                    and Python as an 8-year old to Javascript and HTML now.</div>
+                <div class="scroll-reveal">Well, let's start at the beginning. I've always loved to code, from Scratch
+                    and Python as an 8-year old to Javascript and HTML now.</div>
             </div>
 
         </div>
@@ -246,12 +280,12 @@
         const send = document.getElementById("send");
 
         const left = document.getElementById("left");
-        const accDivs = left.querySelectorAll(':not(.dot):not(.scroll-reveal)');
-        const faccDivs = left.querySelectorAll(':not(.dot):not(.scroll-reveal-blank)');
+        const accDivs = left.querySelectorAll('div.scroll-reveal-blank');
+        const faccDivs = left.querySelectorAll('div.scroll-reveal');
 
         const right = document.getElementById("right");
-        const rAccDivs = right.querySelectorAll(':not(.dright):not(.scroll-reveal)');
-        const frAccDivs = right.querySelectorAll(':not(.dright):not(.scroll-reveal-blank)');
+        const rAccDivs = right.querySelectorAll('div.scroll-reveal-blank');
+        const frAccDivs = right.querySelectorAll('div.scroll-reveal');
 
         // var typed = new Typed('.typed-text', {
         //     strings: ["a coder", "a designer", "a pianist", "unconquerable", "Anicetus.^500"],
@@ -287,7 +321,7 @@
             }
         });
 
-
+        // console.log(faccDivs, frAccDivs);
 
         window.addEventListener('scroll', () => {
 
