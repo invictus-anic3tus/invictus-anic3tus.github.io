@@ -34,6 +34,8 @@
         display: flex;
         margin-top: -10px;
         padding-top: 20%;
+        
+        padding-bottom: 100px;
     }
 
     .scroll-reveal {
@@ -140,7 +142,7 @@
             margin-bottom: 10%;
             z-index: 3;
             height: fit-content;
-            opacity: 1;
+            /* opacity: 1; */
         }
 
         .dot {
@@ -154,8 +156,8 @@
         #center {
             position: absolute;
             text-align: center;
-            top: 20%;
-            height: 65%;
+            top: 7%;
+            height: 85%;
             width: 1%;
             border: 2px solid rgb(255, 255, 255);
             border-radius: 100px;
@@ -216,7 +218,19 @@
 
                 <div class="dot"></div>
 
-                <div class="scroll-reveal">Phat toilet asdf asdf asddf asddf asddf asdfd asddf asdfdHi</div>
+                <div class="scroll-reveal">I've been playing as long as I can remember, and love doing so.</div>
+
+                <div class="scroll-reveal-blank"></div>
+
+                <div class="dot"></div>
+
+                <div class="scroll-reveal">I also have a mind for tech. I've done a lot over the past while, such as:</div>
+
+                <div class="scroll-reveal-blank"></div>
+
+                <div class="dot"></div>
+
+                <div class="scroll-reveal">I equipped my cheap-o 3D printer with Klipper on a Raspberry Pi running Mainsail, getting it two times as fast with great quality,</div>
 
                 <div class="scroll-reveal-blank"></div>
 
@@ -244,13 +258,27 @@
 
                 <div class="dright"></div>
 
-                <div class="scroll-reveal">I play</div>
+                <div class="scroll-reveal">I play regularly on Sunday mornings at a small church and also on Wednesday nights at a larger church.</div>
 
                 <div class="scroll-reveal-blank"></div>
 
                 <div class="dright"></div>
 
-                <div class="scroll-reveal">Rizz asdfasdfas asdfnasdf asdf asdf asdf asdf asdf asddfddfasddfasdfahi</div>
+                <div class="scroll-reveal">Being totally unrelated, I can read and write a bit of Latin! Difficilis est.</div>
+
+                <div class="scroll-reveal-blank"></div>
+
+                <div class="dright"></div>
+
+                <div class="scroll-reveal">I designed a mini keyboard with Hack Club's Hackpad program,</div>
+
+                <div class="scroll-reveal-blank"></div>
+
+                <div class="dright"></div>
+
+                <div class="scroll-reveal">And I'm designing a custom drone, equipped with AI flying mode, VR mode, and a camera for video and picture taking.</div>
+
+                <div class="dright"></div>
 
             </div>
 
@@ -258,15 +286,20 @@
             <div id="mobile" style="flex-direction: column;">
                 <div class="scroll-reveal">Well, let's start at the beginning. I've always loved to code, from Scratch
                     and Python as an 8-year old to Javascript and HTML now.</div>
-                <div class="scroll-reveal">Well, let's start at the beginning. I've always loved to code, from Scratch
-                    and Python as an 8-year old to Javascript and HTML now.</div>
-                <div class="scroll-reveal">Well, let's start at the beginning. I've always loved to code, from Scratch
-                    and Python as an 8-year old to Javascript and HTML now.</div>
-                <div class="scroll-reveal">Well, let's start at the beginning. I've always loved to code, from Scratch
-                    and Python as an 8-year old to Javascript and HTML now.</div>
-                <div class="scroll-reveal">Well, let's start at the beginning. I've always loved to code, from Scratch
-                    and Python as an 8-year old to Javascript and HTML now.</div>
+                <div class="scroll-reveal">I've used Python and C++ before, and remember them decently!</div>
+                <div class="scroll-reveal">I'm proficient in most HTML and Javascript, and quickly learning CSS.</div>
+                <div class="scroll-reveal">My favorite coding project is <a
+                        href="https://easyqmk.vercel.app">EasyQMK,</a> a custom code maker for keyboards.</div>
+                <div class="scroll-reveal">On a different note, I'm also a piano player!</div>
+                <div class="scroll-reveal">I play regularly on Sunday mornings at a small church and also on Wednesday nights at a larger church.</div>
+                <div class="scroll-reveal">I've been playing as long as I can remember, and love doing so.</div>
+                <div class="scroll-reveal">Being totally unrelated, I can read and write a bit of Latin! Difficilis est.</div>
+                <div class="scroll-reveal">I also have a mind for tech. I've done a lot over the past while, such as:</div>
+                <div class="scroll-reveal">I designed a mini keyboard with Hack Club's Hackpad program,</div>
+                <div class="scroll-reveal">I equipped my cheap-o 3D printer with Klipper on a Raspberry Pi running Mainsail, getting it two times as fast with great quality,</div>
+                <div class="scroll-reveal">And I'm designing a custom drone, equipped with AI flying mode, VR mode, and a camera for video and picture taking.</div>
             </div>
+            
 
         </div>
 
@@ -286,6 +319,9 @@
         const right = document.getElementById("right");
         const rAccDivs = right.querySelectorAll('div.scroll-reveal-blank');
         const frAccDivs = right.querySelectorAll('div.scroll-reveal');
+
+        const mobile = document.getElementById("mobile");
+        const madivs = mobile.querySelectorAll("div.scroll-reveal");
 
         // var typed = new Typed('.typed-text', {
         //     strings: ["a coder", "a designer", "a pianist", "unconquerable", "Anicetus.^500"],
@@ -321,6 +357,13 @@
             }
         });
 
+        madivs.forEach(element => {
+            if (isElementInViewport(element)) {
+                element.style.transition = "0s"
+                element.style.opacity = 1;
+            }
+        });
+
         // console.log(faccDivs, frAccDivs);
 
         window.addEventListener('scroll', () => {
@@ -347,6 +390,21 @@
 
                 else {
                     frAccDivs[i].style.opacity = 0;
+                }
+            }
+
+            
+
+
+            for (i = 0; i < madivs.length; i++) {
+                if (isElementInViewport(madivs[i])) {
+                    madivs[i].style.transition = "1.5s opacity ease"
+                    madivs[i].style.opacity = 1;
+
+                }
+
+                else {
+                    madivs[i].style.opacity = 0;
                 }
             }
 

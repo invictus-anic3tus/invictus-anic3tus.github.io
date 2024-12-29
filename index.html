@@ -242,7 +242,7 @@
     resize: none;
     border: 2px solid rgb(0, 19, 70);
     border-radius: 5px;
-    font-weight: 800;
+    font-weight: 500;
     font-size: 1.5vw;
     padding: 5px;
   }
@@ -389,12 +389,12 @@
 
         <div style="display: flex;" class="dark">
           <div class="wborder">
-            <h2 style="width: fit-content;"><a href="https://easy-qmk.vercel.app/">Hackpad V2</a></h2>
+            <h2 style="width: fit-content;"><a href="javascript:void(0)">Hackpad V2</a></h2>
             <a href="https://hackpad.hackclub.com/"><img src="/images/soon.png" alt="Coming Soon!"
                 style="width: 95%; height: auto;"></a>
           </div>
           <div class="wborder">
-            <h2 style="width: fit-content;"><a href="/">Drone Project</a></h2>
+            <h2 style="width: fit-content;"><a href="javascript:void(0)">Drone Project</a></h2>
             <img src="/images/drone.png" alt="MathSite image" style="width: 95%; height: auto;">
           </div>
         </div>
@@ -495,17 +495,27 @@
   </footer>
 
   <script>
-    var send = document.getElementById("send");
+    const send = document.getElementById("send");
+
+    const type = document.querySelector('.typed-text');
 
     var typed = new Typed('.typed-text', {
-      strings: ["a coder", "a designer", "a pianist", "unconquerable", "Anicetus.^500"],
+      strings: [/*"a coder", "a designer", "a pianist", "unconquerable",*/ "Anicetus.^500"],
       typeSpeed: 50,
       backSpeed: 25,
       loop: false,
       backDelay: 1500,
       startDelay: 1000,
-      onComplete: function (self) { self.cursor.remove() }
+      onComplete: function (self) {type.style.paddingRight = getCursorWidth(); self.cursor.remove(); }
     });
+
+    function getCursorWidth() {
+      const typedCursor = document.querySelector('.typed-cursor');
+      if (typedCursor) {
+        return (typedCursor.offsetWidth + "px");
+      }
+      return "11px";
+    }
 
     function disable() {
       send.disabled = true;
