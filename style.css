@@ -127,11 +127,20 @@ a:active {
 }
 
 @media(max-width: 800px) {
+  #navbar {
+    height: 30px;
+    padding-top: 16px;
+    justify-content: center;
+  }
+
   #navbar li a {
-    font-size: 2.5vw;
-    padding: 5px;
-    margin: 0;
+    font-size: 3.5vw;
+    padding: 2px;
+    margin: auto;
     overflow: hidden;
+  }
+  #navbar li {
+    margin: 3px;
   }
   /* #homebut {
     padding: 10px;
@@ -139,6 +148,11 @@ a:active {
     width: 30%;
     height: auto;
   } */
+
+  #homebut {
+    width: 30vw;
+    height: auto;
+  }
   
   #contact {
     padding: 2%;
